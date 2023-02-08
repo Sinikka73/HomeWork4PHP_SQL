@@ -1,4 +1,4 @@
----<!DOCTYPE html>
+----<!DOCTYPE html>
 <html>
   <head>
     <title>Мое резюме</title>
@@ -20,8 +20,12 @@
     $city = 'Россия. Санкт-Петербург';
     $mail = 'olga@mail.ru';
     $phone = '222-33-22';
-    $skills = ['skill_name' => ['PHP', 'Adobe Photoshop', 'Photography', 'Illustrator', 'Media'], 'level' => [30, 40, 67, 45, 55]];
-    $experience = ['exp_name' => ['Бухгалтер ИП', 'Бухгалтер ООО ТД Восток', 'Технолог ООО Ника'], 'begin_date' => ['апрель 2014', 'май 2008', 'сентябрь 1998'], 'end_date' => ['по настоящее время', 'март 2014', 'апрель 2008'], 'descript' => ['Полное бухгалтерское сопровождение ИП на УСН 6%', 'Обработка первичной бухгалтерской документации и ведение складского учёта', 'Инженер-технолог трикотажного производства']]
+    $skills = ['skill_name' => ['PHP', 'Adobe Photoshop', 'Photography', 'Illustrator', 'Media'], 'level' =>                 [30, 40, 67, 45, 55]];
+    $experience = ['exp_name' => ['Бухгалтер ИП', 'Бухгалтер ООО ТД Восток', 'Технолог ООО Ника'], 'begin_date'                 => ['апрель 2014', 'май 2008', 'сентябрь 1998'], 'end_date' => 
+              ['по настоящее время', 'март 2014', 'апрель 2008'], 
+              'descript' => ['Полное бухгалтерское сопровождение ИП на УСН 6%', 'Обработка первичной
+              бухгалтерской документации и ведение складского учёта', 'Инженер-технолог трикотажного
+              производства']]
     
   ?>
 
@@ -91,7 +95,9 @@
           <?php for($i=0; $i<count($experience['exp_name']); $i++) { ?>
                  
           <h5 class="w3-opacity"><b><?php echo $experience['exp_name'][$i] ?> </b></h5>
-          <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i><?php echo $experience['begin_date'][$i] ?> - <span class="w3-tag w3-teal w3-round"><?php echo $experience['end_date'][$i] ?></span></h6>
+          <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i><?php echo  
+          $experience['begin_date'][$i] ?> - <span class="w3-tag w3-teal w3-round"><?php echo 
+          $experience['end_date'][$i] ?></span></h6>
           <p><?php echo $experience['descript'][$i] ?></p>
           <?php } ?>
           <hr>
